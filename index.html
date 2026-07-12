@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NG Power Solutions | UPS & Battery Rental and Sales — Pan India &amp; Pan Asia</title>
+<meta name="description" content="NG Power Solutions provides Online UPS and industrial battery rental &amp; sales across India and Asia. 1kVA to 1000kVA. Data centers, hospitals, manufacturing, telecom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1F3D;
+    --navy-deep:#071527;
+    --blue:#1D5FFF;
+    --orange:#FF6A1A;
+    --white:#FFFFFF;
+    --offwhite:#F4F7FB;
+    --gray-800:#2A2E37;
+    --gray-500:#6B7280;
+    --gray-200:#E4E9F1;
+    --font-display:'Space Grotesk',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--gray-800);background:var(--white);line-height:1.6;overflow-x:hidden;}
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy);line-height:1.15;}
+  .eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:4px;font-weight:600;font-size:.92rem;font-family:var(--font-body);cursor:pointer;border:none;transition:transform .25s ease,box-shadow .25s ease;}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 24px -8px rgba(255,106,26,.55);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -6px rgba(255,106,26,.65);}
+  .btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4);}
+  .btn-outline:hover{background:rgba(255,255,255,.1);}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{transform:translateY(-2px);}
+  section{position:relative;}
+  :focus-visible{outline:2px solid var(--orange);outline-offset:3px;}
+
+  /* ===== Signature element: The Unbroken Line ===== */
+  .line-divider{width:100%;height:64px;display:block;}
+  .line-divider path{fill:none;stroke:url(#lineGrad);stroke-width:2;stroke-linecap:round;}
+
+  /* ===== NAV ===== */
+  header{position:sticky;top:0;z-index:100;background:rgba(10,31,61,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .logo{font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:#fff;display:flex;align-items:center;gap:10px;}
+  .logo-mark{width:34px;height:34px;border-radius:6px;background:linear-gradient(135deg,var(--blue),var(--orange));display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;font-size:.85rem;color:#fff;}
+  .nav-links{display:flex;gap:32px;align-items:center;}
+  .nav-links a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:color .2s;position:relative;}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{display:flex;gap:12px;align-items:center;}
+  .icon-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;border:1px solid rgba(255,255,255,.15);}
+  .mobile-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;}
+  @media(max-width:920px){
+    .nav-links{display:none;}
+    .btn-outline.nav-only{display:none;}
+    .mobile-toggle{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{background:radial-gradient(ellipse at 20% 0%,#122a52 0%,var(--navy) 45%,var(--navy-deep) 100%);color:#fff;padding:96px 0 0;overflow:hidden;position:relative;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-bottom:70px;}
+  .hero h1{font-size:clamp(2.4rem,4.4vw,3.6rem);color:#fff;font-weight:700;margin:18px 0 20px;letter-spacing:-.01em;}
+  .hero h1 span{color:var(--orange);}
+  .hero p.lead{font-size:1.08rem;color:rgba(255,255,255,.72);max-width:520px;margin-bottom:34px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+  .hero-stats div{border-left:2px solid rgba(255,255,255,.15);padding-left:14px;}
+  .hero-stats .num{font-family:var(--font-mono);font-size:1.5rem;font-weight:600;color:#fff;}
+  .hero-stats .lbl{font-size:.76rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;}
+  .hero-visual{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/4.6;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);}
+  .hero-visual img{width:100%;height:100%;object-fit:cover;}
+  .hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,31,61,0) 40%,rgba(7,21,39,.85) 100%);}
+  .hero-visual .badge{position:absolute;bottom:20px;left:20px;right:20px;z-index:2;background:rgba(7,21,39,.7);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px;}
+  .badge .dot{width:10px;height:10px;border-radius:50%;background:#2ee06b;box-shadow:0 0 0 4px rgba(46,224,107,.2);flex-shrink:0;}
+  .badge span{font-family:var(--font-mono);font-size:.8rem;color:#fff;}
+
+  /* waveform svg in hero */
+  .hero-wave{position:absolute;left:0;right:0;bottom:0;height:90px;opacity:.5;}
+
+  /* ===== marquee brands strip ===== */
+  .marquee-wrap{background:var(--navy-deep);padding:18px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.06);}
+  .marquee{display:flex;gap:64px;white-space:nowrap;animation:scroll 28s linear infinite;font-family:var(--font-mono);color:rgba(255,255,255,.45);font-size:.85rem;letter-spacing:.05em;}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ===== SECTION HEADERS ===== */
+  .sec-head{max-width:640px;margin-bottom:52px;}
+  .sec-head h2{font-size:clamp(1.7rem,2.8vw,2.35rem);margin-top:10px;}
+  .sec-head p{color:var(--gray-500);margin-top:14px;font-size:1rem;}
+  .section-pad{padding:96px 0;}
+  .bg-off{background:var(--offwhite);}
+
+  /* ===== Why Choose / features ===== */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-200);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;}
+  .feat{background:#fff;padding:34px 26px;transition:background .2s;}
+  .feat:hover{background:var(--offwhite);}
+  .feat .fnum{font-family:var(--font-mono);color:var(--blue);font-size:.78rem;font-weight:600;}
+  .feat h3{font-size:1.05rem;margin:14px 0 8px;}
+  .feat p{color:var(--gray-500);font-size:.9rem;}
+  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.feat-grid{grid-template-columns:1fr;}}
+
+  /* ===== Service cards (Rental/Sales) ===== */
+  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .service-card{border:1px solid var(--gray-200);border-radius:12px;padding:30px 24px;background:#fff;transition:transform .25s, box-shadow .25s, border-color .25s;position:relative;}
+  .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(10,31,61,.25);border-color:transparent;}
+  .service-card .ic{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:20px;}
+  .service-card h3{font-size:1.1rem;margin-bottom:10px;}
+  .service-card p{color:var(--gray-500);font-size:.88rem;margin-bottom:16px;}
+  .service-card a.link{font-size:.85rem;font-weight:600;color:var(--blue);}
+  @media(max-width:920px){.service-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.service-grid{grid-template-columns:1fr;}}
+
+  /* ===== Product capacity strip ===== */
+  .cap-strip{display:flex;flex-wrap:wrap;gap:10px;}
+  .cap-pill{font-family:var(--font-mono);font-size:.82rem;padding:9px 16px;border:1px solid var(--gray-200);border-radius:30px;color:var(--navy);background:#fff;}
+
+  /* ===== Industries ===== */
+  .ind-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .ind-card{border-radius:10px;padding:22px 16px;background:var(--offwhite);border:1px solid var(--gray-200);text-align:left;transition:all .2s;}
+  .ind-card:hover{background:var(--navy);}
+  .ind-card:hover h4, .ind-card:hover .ind-ic{color:#fff;}
+  .ind-ic{color:var(--blue);margin-bottom:12px;}
+  .ind-card h4{font-size:.92rem;font-weight:600;color:var(--navy);transition:color .2s;}
+  @media(max-width:920px){.ind-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:560px){.ind-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== Stats band ===== */
+  .stats-band{background:var(--navy);color:#fff;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding:70px 0;}
+  .stats-grid .num{font-family:var(--font-mono);font-size:2.6rem;font-weight:700;color:var(--orange);}
+  .stats-grid .lbl{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:6px;text-transform:uppercase;letter-spacing:.05em;}
+  @media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== brands grid ===== */
+  .brand-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .brand-tile{border:1px solid var(--gray-200);border-radius:8px;padding:20px 10px;text-align:center;font-family:var(--font-display);font-weight:600;color:var(--navy);font-size:.85rem;background:#fff;}
+  @media(max-width:800px){.brand-grid{grid-template-columns:repeat(3,1fr);}}
+
+  /* ===== Testimonials ===== */
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .test-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:28px;}
+  .stars{color:var(--orange);font-size:.9rem;margin-bottom:14px;}
+  .test-card p{color:var(--gray-800);font-size:.94rem;margin-bottom:20px;}
+  .test-who{display:flex;align-items:center;gap:12px;}
+  .test-avatar{width:40px;height:40px;border-radius:50%;background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:600;color:var(--navy);font-size:.8rem;}
+  .test-who .name{font-size:.86rem;font-weight:600;color:var(--navy);}
+  .test-who .role{font-size:.78rem;color:var(--gray-500);}
+  @media(max-width:920px){.test-grid{grid-template-columns:1fr;}}
+
+  /* ===== FAQ ===== */
+  .faq-item{border-bottom:1px solid var(--gray-200);}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-family:var(--font-display);font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
+  .faq-q .plus{font-family:var(--font-mono);color:var(--orange);font-size:1.3rem;transition:transform .25s;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{color:var(--gray-500);padding-bottom:22px;font-size:.92rem;max-width:720px;}
+
+  /* ===== Contact ===== */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;}
+  .contact-info-card{background:var(--navy);color:#fff;border-radius:14px;padding:40px 32px;}
+  .contact-info-card h3{color:#fff;font-size:1.3rem;margin-bottom:24px;}
+  .cinfo-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.1);}
+  .cinfo-row:first-of-type{border-top:none;}
+  .cinfo-row .ic{color:var(--orange);flex-shrink:0;}
+  .cinfo-row .lbl{font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em;}
+  .cinfo-row .val{font-size:.92rem;color:#fff;}
+  .form-card{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:36px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .form-row.full{grid-template-columns:1fr;}
+  .form-card label{font-size:.78rem;font-weight:600;color:var(--navy);display:block;margin-bottom:6px;}
+  .form-card input,.form-card select,.form-card textarea{width:100%;padding:12px 14px;border:1px solid var(--gray-200);border-radius:6px;font-family:var(--font-body);font-size:.9rem;color:var(--gray-800);background:var(--offwhite);}
+  .form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:2px solid var(--blue);background:#fff;}
+  @media(max-width:920px){.contact-grid{grid-template-columns:1fr;}}
+  @media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:64px 0 24px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;}
+  .foot-grid h4{color:#fff;font-size:.9rem;margin-bottom:16px;}
+  .foot-grid li{margin-bottom:10px;font-size:.85rem;}
+  .foot-grid a:hover{color:var(--orange);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;font-size:.8rem;flex-wrap:wrap;gap:10px;}
+  @media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ===== Floating buttons ===== */
+  .float-btns{position:fixed;bottom:26px;right:26px;z-index:200;display:flex;flex-direction:column;gap:14px;}
+  .fbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 10px 26px -6px rgba(0,0,0,.35);cursor:pointer;}
+  .fbtn.wa{background:#25D366;}
+  .fbtn.call{background:var(--orange);}
+  .back-top{width:44px;height:44px;background:var(--navy);opacity:.85;}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG defs for the unbroken line gradient -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1D5FFF"/>
+      <stop offset="100%" stop-color="#FF6A1A"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo"><span style="background:#fff;padding:5px 8px;border-radius:6px;display:inline-flex;"><img src="images/ng-logo.png" alt="NG Power Solutions logo" style="height:22px;width:auto;"></span> NG Power Solutions</a>
+    <ul class="nav-links">
+      <li><a href="#ups">UPS</a></li>
+      <li><a href="#battery">Battery</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919980456064" class="icon-btn" aria-label="Call">☎</a>
+      <a href="#contact" class="btn btn-primary" style="padding:11px 20px;">Get a Quote</a>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">◆ Pan India &amp; Pan Asia · 1kVA – 1000kVA</span>
+      <h1>Power that <span>never</span> stops working.</h1>
+      <p class="lead">NG Power Solutions delivers Online UPS and industrial battery rental &amp; sales to data centers, hospitals, factories and mission-critical sites — with same-week deployment across India and Asia.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+        <a href="#ups" class="btn btn-outline">Explore UPS Capacities</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">1400+</div><div class="lbl">Installations</div></div>
+        <div><div class="num">14</div><div class="lbl">Countries Served</div></div>
+        <div><div class="num">24/7</div><div class="lbl">Emergency Response</div></div>
+        <div><div class="num">99.98%</div><div class="lbl">Uptime Delivered</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images/hero-technician-vertiv.jpeg" alt="NG Power Solutions engineer servicing a Vertiv online UPS system">
+      <div class="badge"><div class="dot"></div><span>ON-SITE SERVICE — VERTIV ONLINE UPS — LOAD MONITORED</span></div>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1200 90" preserveAspectRatio="none">
+    <path d="M0,45 L150,45 L170,15 L190,75 L210,45 L400,45 L420,20 L440,70 L460,45 L1200,45"
+      fill="none" stroke="url(#lineGrad)" stroke-width="2"/>
+  </svg>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>APC BY SCHNEIDER ELECTRIC</span><span>VERTIV</span><span>EATON</span><span>DELTA</span><span>NUMERIC</span><span>EMERSON</span><span>RIELLO</span><span>SOCOMEC</span><span>HUAWEI</span><span>FUJI ELECTRIC</span><span>HITACHI</span><span>MITSUBISHI ELECTRIC</span>
+    <span>APC BY SCHNEIDER ELECTRIC</span><span>VERTIV</span><span>EATON</span><span>DELTA</span><span>NUMERIC</span><span>EMERSON</span><span>RIELLO</span><span>SOCOMEC</span><span>HUAWEI</span><span>FUJI ELECTRIC</span><span>HITACHI</span><span>MITSUBISHI ELECTRIC</span>
+  </div>
+</div>
+
+<!-- ===== COMPANY INTRO / WHY CHOOSE US ===== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why NG Power Solutions</span>
+      <h2>Engineered continuity, not just equipment.</h2>
+      <p>We size, deploy and maintain UPS and battery systems for organisations that cannot afford downtime — backed by a pan-Asia logistics and service network.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="fnum">01</div><h3>Rapid Deployment</h3><p>Emergency UPS rental dispatched within hours across major Indian &amp; Asian cities.</p></div>
+      <div class="feat reveal"><div class="fnum">02</div><h3>Full Capacity Range</h3><p>1kVA to 1000kVA online UPS, single &amp; three-phase, modular architectures.</p></div>
+      <div class="feat reveal"><div class="fnum">03</div><h3>OEM-Grade Brands</h3><p>APC, Vertiv, Eaton, Delta, Riello and more — genuine parts, factory-trained technicians.</p></div>
+      <div class="feat reveal"><div class="fnum">04</div><h3>24/7 Field Support</h3><p>Preventive maintenance and on-site emergency response, nationwide.</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 L1200,32"/></svg>
+
+<!-- ===== UPS RENTAL / SALES ===== -->
+<section class="section-pad bg-off" id="ups">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">UPS Solutions</span>
+      <h2>Rental &amp; sales for every load profile.</h2>
+      <p>From a single server rack to a full data hall, our online UPS systems keep critical loads seamlessly powered.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <div class="ic">⚡</div>
+        <h3>UPS Rental</h3>
+        <p>Short and long-term rental for projects, events, plants and emergency backup.</p>
+        <a class="link" href="#contact">View rental process →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic">🛒</div>
+        <h3>UPS Sales</h3>
+        <p>New enterprise, industrial, three-phase and modular UPS systems, fully installed.</p>
+        <a class="link" href="#contact">Talk to sales →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic">🔋</div>
+        <h3>Battery Rental</h3>
+        <p>VRLA, SMF, tubular and lithium-ion battery banks available for bulk rental.</p>
+        <a class="link" href="#battery">Rental plans →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic">🏭</div>
+        <h3>Battery Sales</h3>
+        <p>Industrial, telecom and rack batteries supplied and commissioned on-site.</p>
+        <a class="link" href="#battery">Battery catalogue →</a>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;" class="reveal">
+      <h3 style="font-size:1.05rem;margin-bottom:18px;color:var(--navy);">Available UPS Capacities (kVA)</h3>
+      <div class="cap-strip">
+        <span class="cap-pill">1</span><span class="cap-pill">2</span><span class="cap-pill">3</span><span class="cap-pill">5</span><span class="cap-pill">6</span><span class="cap-pill">10</span><span class="cap-pill">15</span><span class="cap-pill">20</span><span class="cap-pill">30</span><span class="cap-pill">40</span><span class="cap-pill">60</span><span class="cap-pill">80</span><span class="cap-pill">100</span><span class="cap-pill">120</span><span class="cap-pill">160</span><span class="cap-pill">200</span><span class="cap-pill">250</span><span class="cap-pill">300</span><span class="cap-pill">400</span><span class="cap-pill">500</span><span class="cap-pill">600</span><span class="cap-pill">800</span><span class="cap-pill">1000</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BATTERY SECTION with image ===== -->
+<section class="section-pad" id="battery">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+    <div class="reveal" style="border-radius:12px;overflow:hidden;aspect-ratio:5/4;">
+      <img src="images/battery-bank-room.jpeg" alt="Industrial VRLA battery bank installed by NG Power Solutions" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Battery Solutions</span>
+      <h2>Every chemistry, every capacity.</h2>
+      <p style="color:var(--gray-500);margin:16px 0 24px;">We stock and rent VRLA, SMF, tubular, lithium-ion, industrial, rack and telecom batteries — plus high-capacity battery banks engineered for critical backup.</p>
+      <ul style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ VRLA Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ SMF Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ Tubular Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ Lithium-ion Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ Industrial Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ Rack Batteries</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ High Capacity Banks</li>
+        <li style="font-size:.9rem;color:var(--navy);font-weight:600;">▸ Telecom Batteries</li>
+      </ul>
+      <a href="#contact" class="btn btn-navy" style="margin-top:28px;">Request Battery Quote</a>
+    </div>
+  </div>
+</section>
+
+<svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 L1200,32"/></svg>
+
+<!-- ===== INDUSTRIES ===== -->
+<section class="section-pad bg-off" id="industries">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Industries Served</span>
+      <h2>Trusted across mission-critical sectors.</h2>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal"><div class="ind-ic">🏢</div><h4>Data Centers</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">💻</div><h4>IT Companies</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">⚙️</div><h4>Manufacturing</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🏥</div><h4>Hospitals</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">💊</div><h4>Pharmaceutical</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🏦</div><h4>Banking &amp; Finance</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🏛️</div><h4>Government</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🎓</div><h4>Education</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">📡</div><h4>Telecom</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🚧</div><h4>Construction</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🎪</div><h4>Events &amp; Exhibitions</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">📦</div><h4>Warehousing</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">🚚</div><h4>Logistics</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">☀️</div><h4>Renewable Energy</h4></div>
+      <div class="ind-card reveal"><div class="ind-ic">➕</div><h4>&amp; More Sectors</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIELD WORK GALLERY ===== -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On The Ground</span>
+      <h2>Real installations, real engineers.</h2>
+      <p>A look at our team commissioning and servicing UPS and battery systems on active client sites.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;">
+      <div class="reveal" style="grid-column:span 2;grid-row:span 2;border-radius:10px;overflow:hidden;aspect-ratio:1/1;">
+        <img src="images/delta-ups-battery-room.jpeg" alt="NG Power Solutions engineer inspecting Delta UPS and battery racks" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="reveal" style="border-radius:10px;overflow:hidden;aspect-ratio:1/1;">
+        <img src="images/emerson-ups-service.jpeg" alt="Technician servicing Emerson UPS control panel" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="reveal" style="border-radius:10px;overflow:hidden;aspect-ratio:1/1;">
+        <img src="images/power-testing-fluke.jpeg" alt="Load and power quality testing on-site" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="reveal" style="grid-column:span 2;border-radius:10px;overflow:hidden;aspect-ratio:2/1;">
+        <img src="images/amaron-battery-install.jpeg" alt="Technician installing Amaron SMF-VRLA battery bank" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BAND ===== -->
+<section class="stats-band">
+  <div class="wrap stats-grid">
+    <div><div class="num">1400+</div><div class="lbl">Systems Deployed</div></div>
+    <div><div class="num">18+</div><div class="lbl">Years Experience</div></div>
+    <div><div class="num">600+</div><div class="lbl">Corporate Clients</div></div>
+    <div><div class="num">24/7</div><div class="lbl">Support Desk</div></div>
+  </div>
+</section>
+
+<!-- ===== BRANDS ===== -->
+<section class="section-pad" id="brands">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Brands We Deploy</span>
+      <h2>OEM partnerships you can trust.</h2>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-tile reveal">APC Schneider</div>
+      <div class="brand-tile reveal">Vertiv</div>
+      <div class="brand-tile reveal">Eaton</div>
+      <div class="brand-tile reveal">Delta</div>
+      <div class="brand-tile reveal">Numeric</div>
+      <div class="brand-tile reveal">Emerson</div>
+      <div class="brand-tile reveal">Riello</div>
+      <div class="brand-tile reveal">Socomec</div>
+      <div class="brand-tile reveal">Huawei</div>
+      <div class="brand-tile reveal">Fuji Electric</div>
+      <div class="brand-tile reveal">Hitachi</div>
+      <div class="brand-tile reveal">Mitsubishi Electric</div>
+    </div>
+  </div>
+</section>
+
+<svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 L1200,32"/></svg>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section-pad bg-off">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Client Feedback</span>
+      <h2>What our customers say.</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"NG Power deployed a 100kVA rental UPS to our facility within a day during a grid failure. Zero downtime for our production line."</p>
+        <div class="test-who"><div class="test-avatar">RK</div><div><div class="name">Rajesh Kumar</div><div class="role">Plant Head, Manufacturing</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Their battery bank sizing for our data hall was precise and their maintenance team is genuinely responsive."</p>
+        <div class="test-who"><div class="test-avatar">SP</div><div><div class="name">Sandeep Pillai</div><div class="role">IT Infrastructure Lead</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We've rented UPS units from NG Power for three consecutive exhibitions across Asia — always on time, always reliable."</p>
+        <div class="test-who"><div class="test-avatar">AL</div><div><div class="name">Amy Lin</div><div class="role">Events Operations Director</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section-pad" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions.</h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item reveal">
+        <button class="faq-q">How fast can UPS rental be arranged? <span class="plus">+</span></button>
+        <div class="faq-a"><p>For most metro locations across India, emergency UPS rental can be dispatched within 24 hours of confirmed order.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What capacities do you offer? <span class="plus">+</span></button>
+        <div class="faq-a"><p>We supply and rent Online UPS systems from 1kVA up to 1000kVA, including single-phase, three-phase and modular architectures.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you serve locations outside India? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, we operate Pan-Asia with regional logistics partners for delivery, installation and after-sales support.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I rent batteries without a UPS unit? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes, standalone battery rental is available for VRLA, SMF, tubular and lithium-ion systems, in bulk or single units.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you provide installation and maintenance? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Every rental and sale includes professional installation, and optional annual maintenance contracts are available.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0,32 L1200,32"/></svg>
+
+<!-- ===== CONTACT ===== -->
+<section class="section-pad bg-off" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Request a quote today.</h2>
+      <p>Tell us your load requirement and location — our engineering team responds within one business day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card reveal">
+        <h3>Contact Details</h3>
+        <div class="cinfo-row"><div class="ic">☎</div><div><div class="lbl">Phone</div><div class="val">+91 99804 56064</div></div></div>
+        <div class="cinfo-row"><div class="ic">✉</div><div><div class="lbl">Email</div><div class="val">ganesha@ngpowersolutions.com</div></div></div>
+        <div class="cinfo-row"><div class="ic">📍</div><div><div class="lbl">Office</div><div class="val">No 190, 2nd Main, Near Ganapathi Temple, B Block, AECS Layout, Singasandra, Hosur Main Road, Bangalore</div></div></div>
+        <div class="cinfo-row"><div class="ic">🕐</div><div><div class="lbl">Business Hours</div><div class="val">Mon–Sat, 9:00 AM – 7:00 PM IST · 24/7 Emergency Line</div></div></div>
+        <a href="https://wa.me/919980456064" target="_blank" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center;">Chat on WhatsApp</a>
+        <div style="margin-top:20px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.15);">
+          <iframe title="NG Power Solutions location on Google Maps" src="https://www.google.com/maps?q=No+190,+2nd+Main,+Near+Ganapathi+Temple,+B+Block,+AECS+Layout,+Singasandra,+Hosur+Main+Road,+Bangalore&output=embed" width="100%" height="200" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="form-card reveal">
+        <div class="form-row">
+          <div><label>Full Name</label><input type="text" placeholder="Your name"></div>
+          <div><label>Company Name</label><input type="text" placeholder="Company"></div>
+        </div>
+        <div class="form-row">
+          <div><label>Phone</label><input type="tel" placeholder="+91"></div>
+          <div><label>Email</label><input type="email" placeholder="you@company.com"></div>
+        </div>
+        <div class="form-row">
+          <div><label>Requirement</label><select><option>UPS Rental</option><option>UPS Sales</option><option>Battery Rental</option><option>Battery Sales</option></select></div>
+          <div><label>Capacity (kVA)</label><input type="text" placeholder="e.g. 60 kVA"></div>
+        </div>
+        <div class="form-row full">
+          <div><label>Message</label><textarea rows="4" placeholder="Tell us about your project, location and timeline"></textarea></div>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;">Submit Enquiry →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:16px;"><span style="background:#fff;padding:6px 10px;border-radius:6px;display:inline-flex;"><img src="images/ng-logo.png" alt="NG Power Solutions logo" style="height:22px;width:auto;"></span> NG Power Solutions</a>
+        <p style="font-size:.85rem;max-width:280px;">UPS and battery rental &amp; sales across India and Asia — powering data centers, hospitals, factories and critical infrastructure.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#ups">UPS Rental</a></li><li><a href="#ups">UPS Sales</a></li><li><a href="#battery">Battery Rental</a></li><li><a href="#battery">Battery Sales</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#">About Us</a></li><li><a href="#industries">Industries</a></li><li><a href="#brands">Brands</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li>+91 99804 56064</li><li>ganesha@ngpowersolutions.com</li><li>AECS Layout, Singasandra, Bangalore</li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 NG Power Solutions. All rights reserved.</span>
+      <span>Bangalore · Pan India · Pan Asia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-btns">
+  <a href="#top" class="fbtn back-top" aria-label="Back to top">↑</a>
+  <a href="tel:+919980456064" class="fbtn call" aria-label="Call now">☎</a>
+  <a href="https://wa.me/919980456064" target="_blank" class="fbtn wa" aria-label="WhatsApp">☺</a>
+</div>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item = btn.parentElement;
+      const ans = item.querySelector('.faq-a');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight=null;});
+      if(!wasOpen){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight+'px'; }
+    });
+  });
+
+  // Mobile nav simple toggle
+  const toggle = document.querySelector('.mobile-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle?.addEventListener('click',()=>{
+    if(links.style.display==='flex'){links.style.display='none';}
+    else{links.style.display='flex';links.style.flexDirection='column';links.style.position='absolute';links.style.top='76px';links.style.left='0';links.style.right='0';links.style.background='var(--navy)';links.style.padding='20px 24px';links.style.gap='16px';}
+  });
+</script>
+</body>
+</html>
